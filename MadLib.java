@@ -1,43 +1,57 @@
 import java.util.Scanner;
 
 public class MadLib {
+
+    public static String capitalize(String text) {
+        if (text == null || text.length() == 0) {
+            return text;
+        }
+        return text.substring(0, 1).toUpperCase() + text.substring(1);
+    }
+
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
 
-            System.out.println("Enter an emotion");
-            String adj1 = input.nextLine();
+        System.out.println("Enter all verbs in the past tense.\n");
 
-            System.out.println("Enter a name for your character");
-            String noun1 = input.nextLine();
+        System.out.print("Enter an emotion: ");
+        String emotion = input.nextLine();
 
-            System.out.println("Enter a feeling for an action");
-            String adj2 = input.nextLine();
-            
-            System.out.println("Enter a verb");
-            String verb1 = input.nextLine();
-             
-            System.out.println("Enter a verb");
-            String verb2 = input.nextLine();
+        System.out.print("Enter a character name: ");
+        String name = capitalize(input.nextLine());
 
-            System.out.println("Enter a name for the character's friend");
-            String name2 = input.nextLine();
+        System.out.print("Enter a past-tense verb: ");
+        String verb1 = input.nextLine();
 
-            System.out.println("Enter a verb");
-            String verb3 = input.nextLine();
+        System.out.print("Enter an adjective: ");
+        String adjective = input.nextLine();
 
-            System.out.println("Enter a verb");
-            String verb4 = input.nextLine();
+        System.out.print("Enter a noun (situation or event): ");
+        String noun5 = input.nextLine();
 
-            System.out.println("Enter a place");
-            String noun3 = input.nextLine();
 
+        System.out.print("Enter a friend's name: ");
+        String friend = capitalize(input.nextLine());
+
+        System.out.print("Enter another past-tense verb: ");
+        String verb3 = input.nextLine();
+
+        System.out.print("Enter a noun: ");
+        String noun = input.nextLine();
+
+        System.out.print("Enter a place: ");
+        String place = capitalize(input.nextLine());
+
+        System.out.print("Enter an adverb: ");
+        String adverb = input.nextLine();
+
+        System.out.println();
+        System.out.println(name + " woke up feeling " + emotion + " and immediately " + verb1 + ".\n" + 
+                           "It was a " + adjective + " day, so everything felt slightly off.\n" +
+                           "Without thinking, the " + noun5 + " spiraled out of control.\n" + 
+                           friend + " suddenly appeared and " + verb3 + " a mysterious " + noun + ".\n" + 
+                           "Moments later, they ended up at " + place + ", where everything finally made sense.\n" +
+                           "From that point on, life moved " + adverb + ".");
     }
 }
-
-System.out.println("There was a " + adj1 + noun1 + "who " + verb1 + "."/n
-                    "Their name was " + noun1 + "and they really " + adj2 + verb2 + "every day."/n
-                    "One day their friend " + name2 + verb3 + "ed and then started crying intensely."/n
-                    "To comfort " + name2 + "they " + verb4 + "together until they were done."/n
-                    "After a while " + name1 + "and " + name2 + "went to " + noun3 + ", and never came back.")
-
